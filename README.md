@@ -14,6 +14,6 @@ An example usage:
 ```python cssmin.py -o new.min.css bootstrap.css bootstrap-theme.css elusive-webfont.css```
 
 
-Code found and forked from
+Forked from
 
 * http://stackoverflow.com/a/223689
