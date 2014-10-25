@@ -64,7 +64,7 @@ for n, i in enumerate(sys.argv):
                     \t-o, --output \n \
                     \t\tDeclare name of output CSS file. \n \
                     \t-s, --separate \n \
-                    \t\tOutput each individual file as min. ex: \n \
+                    \t\tOutput each individual file as min. i.e.: \n \
                     \t\tstyle.css will become style.min.css"
         break
     elif i in ("-o", "--output"):
