@@ -19,7 +19,6 @@ def cssMinify(css, saveFileName):
     # fragment values can loose zeros
     css = re.sub( r':\s*0(\.\d+([cm]m|e[mx]|in|p[ctx]))\s*;', r':\1;', css )
 
-    returnVal = ""
     for rule in re.findall( r'([^{]+){([^}]*)}', css ):
 
         # we don't need spaces around operators
@@ -38,8 +37,6 @@ def cssMinify(css, saveFileName):
             f = open(saveFileName,'a')
             f.write( "%s{%s}" % ( ','.join( selectors ), ''.join(['%s:%s;' % (key, properties[key]) for key in porder])[:-1] ) )
             f.close()
-            #returnVal = returnVal + "%s{%s}" % ( ','.join( selectors ), ''.join(['%s:%s;' % (key, properties[key]) for key in porder])[:-1] )
-    #return returnVal
 
 def fileMin(ifile):
     returnVal = ''
@@ -80,7 +77,7 @@ for n, i in enumerate(sys.argv):
     elif sepFlag:
         files.append(i)
     else:
-        css = css + open( i, 'r' ).read()
+        css += open( i, 'r' ).read()
 
 if sepFlag:
     for cssFile in files:
